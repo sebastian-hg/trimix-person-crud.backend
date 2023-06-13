@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "9161d232-ccdc-4ae5-882b-bc569b7f8d98",
+		"name": "people",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14314557"
+	},
+	"item": [
+		{
+			"name": "agregar persona",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"santiago\",\n    \"surname\": \"garcia\",\n    \"documentNumber\": 9576433,\n    \"documentType\": \"Cedula\",\n    \"birthDate\": \"02-12-2001\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/v1/person",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por nombre",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8100/api/v1/person?name=Sebastian",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sebastian"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar persona",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8100/api/v1/person/delete?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"v1",
+						"person",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por tipo de documento",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8100/api/v1/person?documentType=DNI",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					],
+					"query": [
+						{
+							"key": "documentType",
+							"value": "DNI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por tipo de documento y nombre",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8100/api/v1/person?name=Sebastian&documentType=DNI",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sebastian"
+						},
+						{
+							"key": "documentType",
+							"value": "DNI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar Persona",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"name\": \"santiago\",\n    \"surname\": \"garcia\",\n    \"documentNumber\": 95764679,\n    \"documentType\": \"DNI\",\n    \"birthDate\": \"2001-12-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/v1/person/editar?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"v1",
+						"person",
+						"editar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
