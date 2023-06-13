@@ -56,7 +56,7 @@ public class DeletePersonServiceImplTest {
     private void givenService() {
 
         Mockito.when(repository.findById(any(Long.class))).thenReturn(Optional.of(person));
-        Mockito.doNothing().when(repository).deleteById(any(Long.class));
+        Mockito.doNothing().when(repository).delete(person);
     }
 
     private void givenResponse() {
@@ -73,7 +73,7 @@ public class DeletePersonServiceImplTest {
                 .expectComplete()
                 .verify();
         Mockito.verify(repository).findById(any(Long.class));
-        Mockito.verify(repository).deleteById(any(Long.class));
+        Mockito.verify(repository).delete(person);
     }
 
 }
