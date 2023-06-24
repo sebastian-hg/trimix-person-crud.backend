@@ -1,6 +1,6 @@
 package com.trimix.personshandling.service.impl;
 
-import com.trimix.personshandling.exception.PersonExistException;
+import com.trimix.personshandling.exception.client.PersonExistException;
 import com.trimix.personshandling.mapper.PersonMapper;
 import com.trimix.personshandling.model.Person;
 import com.trimix.personshandling.model.dto.request.AddPersonRequest;

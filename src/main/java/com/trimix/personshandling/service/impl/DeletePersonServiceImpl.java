@@ -1,6 +1,6 @@
 package com.trimix.personshandling.service.impl;
 
-import com.trimix.personshandling.exception.PersonNotExistException;
+import com.trimix.personshandling.exception.client.PersonNotExistException;
 import com.trimix.personshandling.repository.PersonRepository;
 import com.trimix.personshandling.service.DeletePersonService;
 import lombok.AllArgsConstructor;

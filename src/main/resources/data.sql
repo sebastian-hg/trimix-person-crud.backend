@@ -22,5 +22,6 @@ VALUES
 ('Mauricio', 'Macri', '12453987', 'DNI', '1976-09-20'),
 ('Arturo', 'Vidal', '32449754', 'Cedula', '2002-09-20'),
 ('Javier', 'Miley', '25875432', 'DNI', '1980-01-20'),
-('George', 'Clouney', '53325875432', 'Pasaporte', '1980-01-20');
+('George', 'Clouney', '53325875432', 'Pasaporte', '1980-01-20'),
+('sebastian', 'hernandez', '25671955', 'DNI', '1996-11-21');
 

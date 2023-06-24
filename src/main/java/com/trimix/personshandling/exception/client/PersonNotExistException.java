@@ -1,4 +1,4 @@
-package com.trimix.personshandling.exception;
+package com.trimix.personshandling.exception.client;
 
 
 import org.springframework.http.HttpStatus;
